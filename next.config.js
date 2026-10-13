@@ -3,6 +3,7 @@ const basePath = isProd ? '/marina-fabric-store' : '';
 const nextConfig = {
   distDir: isProd ? '.next' : '.next-dev',
   output: 'export',
+  trailingSlash: true,
   basePath,
   assetPrefix: basePath ? `${basePath}/` : undefined,
   images: { unoptimized: true, remotePatterns: [{ protocol: 'https', hostname: '**' }] }
